@@ -7,7 +7,9 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="scroll-smooth">
       <body>{children}</body>
     </html>
   );
