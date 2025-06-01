@@ -1,0 +1,40 @@
+{
+  "name": "earth-store-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "rimraf .next && next dev --turbopack",
+    "build": "next lint && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prod": "rimraf .next && next lint && next build && next start"
+  },
+  "dependencies": {
+    "next": "15.3.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "sharp": "0.34.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3",
+    "@tailwindcss/postcss": "4",
+    "@types/node": "22",
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "eslint": "9",
+    "eslint-config-next": "15.3.3",
+    "prettier": "3.5.3",
+    "prettier-plugin-tailwindcss": "0.6.12",
+    "rimraf": "6.0.1",
+    "tailwindcss": "4",
+    "typescript": "5"
+  },
+  "trustedDependencies": [
+    "@tailwindcss/oxide",
+    "sharp",
+    "unrs-resolver"
+  ],
+  "author": "Saikat Sardar",
+  "license": "MIT",
+  "homepage": "https://github.com/MrSaikatS/outdoor-adventure-nextjs"
+}
