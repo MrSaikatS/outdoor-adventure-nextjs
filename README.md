@@ -1,2 +1,1 @@
-# outdoor-adventure-nextjs
-Outdoor Adventure Static - Next.js
+# Outdoor Adventure Static - Next.js
