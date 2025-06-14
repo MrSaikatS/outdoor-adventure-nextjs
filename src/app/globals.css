@@ -6,6 +6,9 @@
 @theme {
   --color-primary-crimson: #fb2056;
   --color-primary-crimson-hover: #c80435;
+
+  --font-montserrat: Montserrat;
+  --font-noto-sans: Noto Sans;
 }
 
 @theme inline {

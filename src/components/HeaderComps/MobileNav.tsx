@@ -20,7 +20,7 @@ const MobileNav = () => {
         />
       </SheetTrigger>
 
-      <SheetContent className="bg-background/50 flex flex-col items-center gap-4 border-0 p-2 text-lg backdrop-blur-xl">
+      <SheetContent className="bg-background/70 font-noto-sans flex flex-col items-center gap-4 border-0 p-2 text-lg backdrop-blur-xl">
         <SheetHeader>
           <SheetTitle className="text-primary-crimson-hover text-center text-2xl font-bold tracking-[.2rem] uppercase">
             Menu

@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import "./globals.css";
+import { montserrat, notoSans } from "@/lib/fonts";
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -9,8 +10,11 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html
       lang="en"
-      className="scroll-smooth">
-      <body>{children}</body>
+      className={`${notoSans.variable} ${montserrat.variable} scroll-smooth antialiased`}
+      suppressHydrationWarning>
+      <body>
+        <main>{children}</main>
+      </body>
     </html>
   );
 };
