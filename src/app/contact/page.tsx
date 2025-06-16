@@ -1,4 +1,3 @@
-import Header from "@/components/HeaderComps/Header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,11 +6,7 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <></>;
 };
 
 export default page;

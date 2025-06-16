@@ -2,6 +2,7 @@ import { ArrowBigRight } from "lucide-react";
 import Image from "next/image";
 import LinkButton from "../LinkButton";
 import { EventType } from "@/lib/types";
+import HeadingComps from "../HeadingComps";
 
 const EventsCard = ({ info }: { info: EventType }) => {
   return (
@@ -14,9 +15,7 @@ const EventsCard = ({ info }: { info: EventType }) => {
         className="h-auto w-full rounded-lg shadow-lg"
       />
 
-      <div className="font-montserrat mt-5 text-xl font-bold">
-        {info.eTitle}
-      </div>
+      <HeadingComps classname="mt-5 text-xl">{info.eTitle}</HeadingComps>
 
       <div className="font-noto-sans mt-2 text-center text-sm lg:text-base">
         {info.eDescription}

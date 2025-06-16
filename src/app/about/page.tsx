@@ -1,5 +1,6 @@
-import Header from "@/components/HeaderComps/Header";
+import MissionSec from "@/components/AboutPageComps/MissionSec";
 import AboutHero from "@/components/HeroComps/AboutHero";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <Header />
-
       <AboutHero />
+
+      <MissionSec />
     </>
   );
 };

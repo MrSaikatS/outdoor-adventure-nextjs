@@ -1,17 +1,20 @@
+import HeadingComps from "../HeadingComps";
 import LinkButton from "../LinkButton";
 import Underline from "../Underline";
 
 const HomeHero = () => {
   return (
-    <section className="bg-[url(/home/hero-bg.jpg)] bg-cover bg-fixed bg-center bg-no-repeat">
-      <div className="font-montserrat flex flex-col items-center justify-center bg-black/60 py-36 text-white md:py-[12rem]">
-        <div className="text-xl font-semibold">Explore the Colourful World</div>
+    <section className="bg-[url(/home/hero-bg.jpg)] bg-cover bg-center bg-no-repeat lg:bg-fixed">
+      <div className="grid place-items-center gap-2 bg-black/60 py-28 text-white lg:py-[18rem]">
+        <HeadingComps classname="text-xl font-semibold">
+          Explore the Colourful World
+        </HeadingComps>
 
-        <Underline />
+        <Underline className="w-16" />
 
-        <div className="mt-2 text-3xl font-bold lg:mt-4 lg:text-6xl">
+        <HeadingComps classname="mt-0 text-3xl font-bold lg:mt-4 lg:text-6xl">
           A Wonderful Gift
-        </div>
+        </HeadingComps>
 
         <LinkButton
           href="/"

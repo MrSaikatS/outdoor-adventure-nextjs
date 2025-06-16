@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import "./globals.css";
 import { montserrat, notoSans } from "@/lib/fonts";
 import Header from "@/components/HeaderComps/Header";
+import Footer from "@/components/Footer/Footer";
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -17,6 +18,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <Header />
 
         <main>{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
