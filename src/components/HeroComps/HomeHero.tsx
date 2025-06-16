@@ -3,7 +3,7 @@ import LinkButton from "../LinkButton";
 const HomeHero = () => {
   return (
     <section className="bg-[url(/home/hero-bg.jpg)] bg-cover bg-fixed bg-center bg-no-repeat">
-      <div className="flex h-[80dvh] flex-col items-center justify-center bg-black/60 text-white">
+      <div className="font-montserrat flex flex-col items-center justify-center bg-black/60 py-36 text-white md:py-[12rem]">
         <div className="text-2xl font-semibold">
           Explore the Colourful World
         </div>

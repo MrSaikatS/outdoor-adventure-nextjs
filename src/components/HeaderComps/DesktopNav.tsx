@@ -3,7 +3,7 @@ import LinkButton from "../LinkButton";
 
 const DesktopNav = () => {
   return (
-    <nav className="flex items-center gap-8 text-lg text-white">
+    <nav className="font-noto-sans flex items-center gap-8 text-lg text-white">
       <Link
         href={`/`}
         className="">
