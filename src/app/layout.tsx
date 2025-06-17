@@ -12,7 +12,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html
       lang="en"
-      className={`${notoSans.variable} ${montserrat.variable} scroll-smooth antialiased`}
+      className={`${notoSans.variable} ${montserrat.variable} selection:bg-primary-crimson selection:text-background scroll-smooth antialiased`}
       suppressHydrationWarning>
       <body>
         <Header />
