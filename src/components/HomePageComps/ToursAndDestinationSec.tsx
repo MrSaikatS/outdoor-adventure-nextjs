@@ -8,7 +8,7 @@ const ToursAndDestinationSec = () => {
   return (
     <section className="mx-auto grid max-w-7xl grid-cols-1 gap-5 px-6 py-16 lg:grid-cols-3">
       <div className="me-0 mb-14 space-y-5 lg:me-14 lg:mb-0">
-        <HeadingComps classname="text-2xl lg:text-4xl">
+        <HeadingComps className="text-2xl lg:text-4xl">
           Upcoming Tours & Destination
         </HeadingComps>
 

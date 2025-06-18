@@ -9,7 +9,7 @@ const MissionSec = () => {
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-24">
         <div className="space-y-5">
-          <HeadingComps classname="text-2xl lg:text-4xl">
+          <HeadingComps className="text-2xl lg:text-4xl">
             Our MissioN
           </HeadingComps>
 
@@ -41,7 +41,7 @@ const MissionSec = () => {
         {/* Experience Tabs */}
 
         <div className="space-y-5">
-          <HeadingComps classname="text-xl lg:text-2xl">
+          <HeadingComps className="text-xl lg:text-2xl">
             Extraordinary Experiences
           </HeadingComps>
 
@@ -60,7 +60,7 @@ const MissionSec = () => {
         {/* Values Tabs */}
 
         <div className="space-y-5">
-          <HeadingComps classname="text-xl lg:text-2xl">
+          <HeadingComps className="text-xl lg:text-2xl">
             Our Core Values
           </HeadingComps>
 

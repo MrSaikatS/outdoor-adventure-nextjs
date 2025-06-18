@@ -15,7 +15,7 @@ const EventsCard = ({ info }: { info: EventType }) => {
         className="h-auto w-full rounded-lg shadow-lg"
       />
 
-      <HeadingComps classname="mt-5 text-xl">{info.eTitle}</HeadingComps>
+      <HeadingComps className="mt-5 text-xl">{info.eTitle}</HeadingComps>
 
       <div className="font-noto-sans mt-2 text-center text-sm lg:text-base">
         {info.eDescription}

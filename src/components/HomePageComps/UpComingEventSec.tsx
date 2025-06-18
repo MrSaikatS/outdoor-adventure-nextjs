@@ -5,9 +5,9 @@ import EventsCard from "./EventsCard";
 
 const UpComingEventSec = () => {
   return (
-    <section className="mx-auto max-w-7xl space-y-10 px-6 py-14 lg:py-24">
-      <div className="grid place-items-center">
-        <HeadingComps classname="mb-2 text-2xl lg:text-4xl">
+    <section className="mx-auto max-w-7xl space-y-10 px-6 py-14 lg:space-y-16 lg:py-24">
+      <div className="grid place-items-center gap-2 lg:gap-6">
+        <HeadingComps className="mb-2 text-2xl lg:text-4xl">
           Upcoming Events
         </HeadingComps>
 

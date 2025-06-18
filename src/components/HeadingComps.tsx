@@ -1,13 +1,14 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, PropsWithChildren } from "react";
 
-type HeadingCompsProps = {
-  children: ReactNode;
-  classname?: string;
-};
+type HeadingCompsProps = PropsWithChildren<HTMLAttributes<HTMLDivElement>>;
 
-const HeadingComps = ({ children, classname }: HeadingCompsProps) => {
+const HeadingComps = ({ children, className, ...props }: HeadingCompsProps) => {
   return (
-    <div className={`${classname} font-montserrat font-bold`}>{children}</div>
+    <div
+      className={`${className} font-montserrat font-bold`}
+      {...props}>
+      {children}
+    </div>
   );
 };
 
