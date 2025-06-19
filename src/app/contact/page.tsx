@@ -1,3 +1,5 @@
+import ContactsForm from "@/components/ContactPageComps/ContactsForm";
+import ContactHero from "@/components/HeroComps/ContactHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +8,16 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return <></>;
+  return (
+    <>
+      <ContactHero />
+
+      <section className="gap-10s mx-auto grid max-w-7xl grid-cols-1 space-y-24 px-6 py-16 lg:grid-cols-2 lg:py-24">
+        <ContactsForm />
+        <div className="">Contacts</div>
+      </section>
+    </>
+  );
 };
 
 export default page;
