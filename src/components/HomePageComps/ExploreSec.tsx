@@ -5,7 +5,7 @@ import HeadingComps from "../HeadingComps";
 
 const ExploreSec = () => {
   return (
-    <section className="bg-[url('/home/section-bg.jpg')] bg-cover bg-top bg-no-repeat lg:bg-fixed">
+    <section className="bg-[url(/home/section-bg.jpg)] bg-cover bg-top bg-no-repeat lg:bg-fixed">
       <div className="flex justify-end bg-black/60">
         <div className="text-background max-w-7xl space-y-5 px-6 py-24 md:w-1/2 lg:py-40">
           <HeadingComps className="text-2xl lg:text-4xl">

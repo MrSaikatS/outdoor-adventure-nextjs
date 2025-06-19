@@ -13,7 +13,7 @@ const MissionSec = () => {
             Our MissioN
           </HeadingComps>
 
-          <Underline className="w-20 lg:w-24" />
+          <Underline className="w-16 lg:w-20" />
 
           <div className="font-noto-sans">
             Click edit button to change this text. Lorem ipsum dolor sit amet,
@@ -45,7 +45,7 @@ const MissionSec = () => {
             Extraordinary Experiences
           </HeadingComps>
 
-          <Underline className="w-20 lg:w-24" />
+          <Underline className="w-16 lg:w-20" />
           <div className="font-noto-sans">
             Click edit button to change this text. Lorem ipsum dolor sit amet,
             consectetur adipiscing elit.
@@ -64,7 +64,7 @@ const MissionSec = () => {
             Our Core Values
           </HeadingComps>
 
-          <Underline className="w-20 lg:w-24" />
+          <Underline className="w-16 lg:w-20" />
 
           <div className="font-noto-sans">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit

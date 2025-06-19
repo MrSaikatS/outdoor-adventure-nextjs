@@ -1,3 +1,4 @@
+import ProjectsHero from "@/components/HeroComps/ProjectsHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,11 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return <></>;
+  return (
+    <>
+      <ProjectsHero />
+    </>
+  );
 };
 
 export default page;

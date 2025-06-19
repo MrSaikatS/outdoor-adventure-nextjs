@@ -4,3 +4,10 @@ export type EventType = {
   eTitle: string;
   eDescription: string;
 };
+
+export type ServiceType = {
+  sId: string;
+  sImage: string;
+  sTitle: string;
+  sDescription: string;
+};
