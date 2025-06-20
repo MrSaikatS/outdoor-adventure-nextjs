@@ -12,8 +12,9 @@ const page = () => {
     <>
       <ContactHero />
 
-      <section className="gap-10s mx-auto grid max-w-7xl grid-cols-1 space-y-24 px-6 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 space-y-24 px-6 py-16 lg:grid-cols-2 lg:py-24">
         <ContactsForm />
+
         <div className="">Contacts</div>
       </section>
     </>
