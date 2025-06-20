@@ -2,8 +2,11 @@
 
 import { contactSchema } from "@/lib/schema";
 import { ContactSchemaType } from "@/lib/types";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import HeadingComps from "../HeadingComps";
 import { Button } from "../ui/button";
 import {
@@ -24,11 +27,21 @@ const ContactsForm = () => {
       email: "",
       message: "",
     },
-    mode: "all",
+    mode: "onChange",
   });
 
-  const handleSubmit = (fData: ContactSchemaType) => {
-    console.log(fData);
+  const handleSubmit = async (fData: ContactSchemaType) => {
+    // Delay sending the form data
+    await new Promise<void>((resolve) => setTimeout(resolve, 3000));
+
+    if (contactForm.formState.isSubmitSuccessful) {
+      toast.success("Successfully sent the message!");
+
+      contactForm.reset();
+      console.log(fData);
+    } else {
+      toast.error("Something went wrong!");
+    }
   };
 
   return (
@@ -48,6 +61,15 @@ const ContactsForm = () => {
                   <Input
                     {...field}
                     placeholder="Your Full Name"
+                    disabled={contactForm.formState.isSubmitting}
+                    type="text"
+                    // live validation style changes like input border color
+                    className={cn(
+                      contactForm.formState.dirtyFields.name
+                        ? "border-green-500 focus-visible:ring-green-600/20"
+                        : "",
+                      "font-noto-sans py-6 transition-all duration-300 ease-in-out",
+                    )}
                   />
                 </FormControl>
 
@@ -64,6 +86,15 @@ const ContactsForm = () => {
                   <Input
                     {...field}
                     placeholder="Your Email"
+                    disabled={contactForm.formState.isSubmitting}
+                    type="email"
+                    // live validation style changes like input border color
+                    className={cn(
+                      contactForm.formState.dirtyFields.email
+                        ? "border-green-500 focus-visible:ring-green-600/20"
+                        : "",
+                      "font-noto-sans py-6 transition-all duration-300 ease-in-out",
+                    )}
                   />
                 </FormControl>
 
@@ -79,6 +110,14 @@ const ContactsForm = () => {
                 <FormControl>
                   <Textarea
                     placeholder="Type your message here."
+                    disabled={contactForm.formState.isSubmitting}
+                    // live validation style changes like input border color
+                    className={cn(
+                      contactForm.formState.dirtyFields.message
+                        ? "border-green-500 focus-visible:ring-green-600/20"
+                        : "",
+                      "font-noto-sans py-6 transition-all duration-300 ease-in-out",
+                    )}
                     {...field}
                   />
                 </FormControl>
@@ -91,8 +130,17 @@ const ContactsForm = () => {
           <Button
             type="submit"
             onClick={contactForm.handleSubmit(handleSubmit)}
-            className="bg-primary-crimson hover:bg-primary-crimson-hover font-noto-sans rounded-4xl px-16">
-            Send Message
+            disabled={contactForm.formState.isSubmitting}
+            className="bg-primary-crimson hover:bg-primary-crimson-hover font-noto-sans rounded-4xl px-8 py-6">
+            {/* show loading spinner when form is submitting  */}
+
+            {contactForm.formState.isSubmitting ? (
+              <span className="flex items-center gap-2">
+                <Loader className="animate-spin" /> Sending...
+              </span>
+            ) : (
+              "Send Message"
+            )}
           </Button>
         </form>
       </Form>
