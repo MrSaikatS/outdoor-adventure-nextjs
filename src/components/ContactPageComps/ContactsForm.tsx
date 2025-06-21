@@ -34,7 +34,7 @@ const ContactsForm = () => {
     // Delay sending the form data
     await new Promise<void>((resolve) => setTimeout(resolve, 3000));
 
-    if (contactForm.formState.isSubmitSuccessful) {
+    if (contactForm.formState.isSubmitted) {
       toast.success("Successfully sent the message!");
 
       contactForm.reset();
@@ -65,9 +65,11 @@ const ContactsForm = () => {
                     type="text"
                     // live validation style changes like input border color
                     className={cn(
-                      contactForm.formState.dirtyFields.name
-                        ? "border-green-500 focus-visible:ring-green-600/20"
-                        : "",
+                      contactForm.formState.errors.name
+                        ? "border-red-500 focus-visible:ring-red-600/20"
+                        : contactForm.formState.dirtyFields.name
+                          ? "border-green-500 focus-visible:ring-green-300"
+                          : "",
                       "font-noto-sans py-6 transition-all duration-300 ease-in-out",
                     )}
                   />
@@ -90,9 +92,11 @@ const ContactsForm = () => {
                     type="email"
                     // live validation style changes like input border color
                     className={cn(
-                      contactForm.formState.dirtyFields.email
-                        ? "border-green-500 focus-visible:ring-green-600/20"
-                        : "",
+                      contactForm.formState.errors.email
+                        ? "border-red-500 focus-visible:ring-red-600/20"
+                        : contactForm.formState.dirtyFields.email
+                          ? "border-green-500 focus-visible:ring-green-300"
+                          : "",
                       "font-noto-sans py-6 transition-all duration-300 ease-in-out",
                     )}
                   />
@@ -113,9 +117,11 @@ const ContactsForm = () => {
                     disabled={contactForm.formState.isSubmitting}
                     // live validation style changes like input border color
                     className={cn(
-                      contactForm.formState.dirtyFields.message
-                        ? "border-green-500 focus-visible:ring-green-600/20"
-                        : "",
+                      contactForm.formState.errors.message
+                        ? "border-red-500 focus-visible:ring-red-600/20"
+                        : contactForm.formState.dirtyFields.message
+                          ? "border-green-500 focus-visible:ring-green-300"
+                          : "",
                       "font-noto-sans py-6 transition-all duration-300 ease-in-out",
                     )}
                     {...field}

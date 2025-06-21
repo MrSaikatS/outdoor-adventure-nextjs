@@ -3,6 +3,7 @@ import HeadingComps from "@/components/HeadingComps";
 import ContactHero from "@/components/HeroComps/ContactHero";
 import { Facebook, Twitter, Youtube } from "lucide-react";
 import { Metadata } from "next";
+import Link from "next/link";
 import { Slide, ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
@@ -43,21 +44,29 @@ const page = () => {
               Follow Us
             </HeadingComps>{" "}
             <div className="flex gap-4">
-              <Facebook
-                fill="#fff"
-                size={38}
-                className="bg-primary-crimson hover:bg-foreground/80 rounded-full border-0 p-2 text-white"
-              />
-              <Twitter
-                fill="#fff"
-                size={38}
-                className="bg-primary-crimson hover:bg-foreground/80 rounded-full border-0 p-2 text-white"
-              />
-              <Youtube
-                // fill="#fff"
-                size={38}
-                className="bg-primary-crimson hover:bg-foreground/80 rounded-full border-0 p-2 text-white"
-              />
+              <Link href={"/"}>
+                <Facebook
+                  fill="#fff"
+                  size={38}
+                  className="bg-primary-crimson hover:bg-foreground/80 rounded-full border-0 p-2 text-white"
+                />
+              </Link>
+
+              <Link href={"/"}>
+                <Twitter
+                  fill="#fff"
+                  size={38}
+                  className="bg-primary-crimson hover:bg-foreground/80 rounded-full border-0 p-2 text-white"
+                />
+              </Link>
+
+              <Link href={"/"}>
+                <Youtube
+                  // fill="#fff"
+                  size={38}
+                  className="bg-primary-crimson hover:bg-foreground/80 rounded-full border-0 p-2 text-white"
+                />
+              </Link>
             </div>
           </div>
         </div>
